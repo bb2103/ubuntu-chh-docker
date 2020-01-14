@@ -6,7 +6,7 @@ RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricte
     echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse" >> /etc/apt/sources.chn.list && \
     echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse" >> /etc/apt/sources.chn.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends openssh-server vim dumb-init && \
+    apt-get install -y --no-install-recommends openssh-server vim dumb-init apt-transport-https ca-certificates curl wget net-tools && \
     mkdir /var/run/sshd && \
     echo 'root:root' | chpasswd && \
     sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
