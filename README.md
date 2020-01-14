@@ -1,2 +1,4 @@
 # ubuntu-chh-docker
-Ubuntu China Init + Dump Init
+Ubuntu Startup Docker
+Include basics tools, including vim, sshd, etc.
+Init works, which means systemctl works.
